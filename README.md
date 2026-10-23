@@ -9,7 +9,7 @@ Fluent Shade lets you customize website appearance with dark and light themes, p
 - **Dark and light themes** — customize the appearance of supported websites.
 - **Per-site customization** — configure themes for individual websites.
 - **Local settings** — theme preferences are stored in browser-local storage; no Fluent Shade account is required.
-- **Firefox and Edge builds** — browser packages use the appropriate Manifest V3 background configuration.
+- **Firefox and Edge builds** — browser packages use the appropriate background configuration for each browser.
 
 ## Installation
 
@@ -38,7 +38,9 @@ The intended core styling behavior runs locally in the browser. Settings, per-si
 
 ## Known limitations
 
-Website structures differ, so styling may not look perfect on every page. Content in cross-origin frames, shadow DOM, and browser-restricted pages may not be fully affected. Website changes can also affect compatibility.
+- **YouTube is currently unsupported in both the Firefox and Microsoft Edge builds.** Fluent Shade may not apply its themes correctly to YouTube's interface.
+- Website structures differ, so styling may not look perfect on every page.
+- Content in cross-origin frames, shadow DOM, and browser-restricted pages may not be fully affected. Website changes can also affect compatibility.
 
 ## Creator's no-monetization position
 
