@@ -1,6 +1,6 @@
 # Fluent Shade
 
-**A customizable per-site dark and light theme extension for Firefox and Microsoft Edge.**
+**A customizable per-site dark and light theme extension for Firefox, Tor Browser, and Microsoft Edge.**
 
 Fluent Shade lets you customize website appearance with dark and light themes, per-site rules, and browser-local settings.
 
@@ -9,22 +9,35 @@ Fluent Shade lets you customize website appearance with dark and light themes, p
 - **Dark and light themes** — customize the appearance of supported websites.
 - **Per-site customization** — configure themes for individual websites.
 - **Local settings** — theme preferences are stored in browser-local storage; no Fluent Shade account is required.
-- **Firefox and Edge builds** — browser packages use the appropriate background configuration for each browser.
+- **Multiple browser builds** — Firefox and Tor Browser use the Firefox build; Microsoft Edge has a separate build.
+
+## Browser compatibility
+
+- **Firefox:** Supported; use the Firefox package.
+- **Tor Browser:** The Firefox build has been confirmed to work by the project maintainer. This is user-tested compatibility, not official Tor Project support.
+- **Microsoft Edge:** Use the separate Edge package.
+- **YouTube:** Currently unsupported in both the Firefox-based and Edge builds.
+
+**Tor Browser privacy note:** The Tor Project strongly discourages installing additional extensions because they can affect privacy, security, and browser fingerprinting. Install Fluent Shade in Tor Browser only if you understand and accept those potential trade-offs. See the [Tor Project's guidance on browser add-ons](https://support.torproject.org/tor-browser/features/plugins/).
 
 ## Installation
 
-### Microsoft Edge (manual testing)
+### Microsoft Edge
 
 1. Download and extract the Microsoft Edge-specific ZIP package.
 2. Open `edge://extensions`.
 3. Turn on **Developer mode**.
 4. Select **Load unpacked** and choose the extracted folder containing `manifest.json`.
 
-### Firefox (manual testing)
+### Firefox
 
 1. Download and extract the Firefox ZIP package.
 2. Open `about:debugging#/runtime/this-firefox`.
 3. Select **Load Temporary Add-on** and choose the package's `manifest.json`.
+
+### Tor Browser
+
+The Firefox build has been confirmed to work by the project maintainer. Tor Browser is based on Firefox, but it is specially configured for privacy and anonymity. The Tor Project recommends against installing additional extensions because they may weaken privacy protections or make the browser fingerprint more distinctive. Use the Firefox build only if you accept these risks. Follow Tor Browser's own extension-installation controls and policies.
 
 Temporary development installations may be removed when the browser restarts. For public distribution, submit the relevant package through the browser's official add-on store after testing and review.
 
@@ -38,7 +51,7 @@ The intended core styling behavior runs locally in the browser. Settings, per-si
 
 ## Known limitations
 
-- **YouTube is currently unsupported in both the Firefox and Microsoft Edge builds.** Fluent Shade may not apply its themes correctly to YouTube's interface.
+- **YouTube is currently unsupported in both the Firefox and Microsoft Edge builds.**
 - Website structures differ, so styling may not look perfect on every page.
 - Content in cross-origin frames, shadow DOM, and browser-restricted pages may not be fully affected. Website changes can also affect compatibility.
 
@@ -52,7 +65,7 @@ The creator's intention is for Fluent Shade to remain freely available and not b
 
 Fluent Shade is provided **"as is," without warranties of any kind**. Use it at your own discretion. Compatibility and appearance are not guaranteed on every website. The author does not promise ongoing maintenance or user support.
 
-Fluent Shade is an independent project and is not affiliated with or endorsed by the original Dark Reader team, Mozilla/Firefox, or Microsoft/Edge. Product names and trademarks belong to their respective owners.
+Fluent Shade is an independent project and is not affiliated with or endorsed by the original Dark Reader team, Mozilla/Firefox, the Tor Project/Tor Browser, or Microsoft/Edge. Product names and trademarks belong to their respective owners.
 
 ## License
 
