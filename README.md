@@ -1,65 +1,61 @@
 # Fluent Shade
 
-**A customizable per-site dark and light theme extension for Firefox.**
+**A customizable per-site dark and light theme extension for Firefox and Microsoft Edge.**
 
-Fluent Shade lets you customize the appearance of websites using dark and light themes. It is designed for users who want more control over how websites look while browsing.
+Fluent Shade lets you customize website appearance with dark and light themes, per-site rules, and browser-local settings.
 
 ## Features
 
 - **Dark and light themes** — customize the appearance of supported websites.
 - **Per-site customization** — configure themes for individual websites.
-- **Firefox integration** — access the extension through the browser toolbar and options page.
-- **Local settings** — designed to keep extension settings in your browser rather than requiring an online account.
+- **Local settings** — theme preferences are stored in browser-local storage; no Fluent Shade account is required.
+- **Firefox and Edge builds** — browser packages use the appropriate Manifest V3 background configuration.
 
 ## Installation
 
-### Install from Mozilla Add-ons
+### Microsoft Edge (manual testing)
 
-Once Fluent Shade is approved and published, you will be able to install it through its official Mozilla Add-ons listing.
+1. Download and extract the Microsoft Edge-specific ZIP package.
+2. Open `edge://extensions`.
+3. Turn on **Developer mode**.
+4. Select **Load unpacked** and choose the extracted folder containing `manifest.json`.
 
-### Install manually for testing
+### Firefox (manual testing)
 
-1. Download or clone this repository.
-2. Open Firefox and enter `about:debugging` in the address bar.
-3. Select **This Firefox**.
-4. Click **Load Temporary Add-on**.
-5. Select the extension's `manifest.json` file.
+1. Download and extract the Firefox ZIP package.
+2. Open `about:debugging#/runtime/this-firefox`.
+3. Select **Load Temporary Add-on** and choose the package's `manifest.json`.
 
-Temporary installations are removed when Firefox restarts. For regular use, install a Mozilla-signed release when one is available.
+Temporary development installations may be removed when the browser restarts. For public distribution, submit the relevant package through the browser's official add-on store after testing and review.
 
 ## Permissions
 
-Fluent Shade requests browser permissions to support its functionality:
-
-- **Storage** — save extension settings.
-- **Active tab and tabs** — interact with browser tabs as needed for extension features.
-- **Website access** — allow the extension to apply themes to websites.
-
-Website access is broad because the extension is intended to work across different websites. Review the source code if you want to understand exactly how these permissions are used.
+Fluent Shade uses storage to save settings and browser-tab access to apply updated settings to open websites. It requests broad website access because it is designed to theme sites across the web. Review the manifest and source code to understand the requested permissions.
 
 ## Privacy
 
-Fluent Shade is designed to apply website styling and manage its settings within the browser. It does not require users to create an online account.
-
-Review the source code and permission declarations for details about its behavior and data handling.
+The intended core styling behavior runs locally in the browser. Settings, per-site rules, schedule preferences, and custom CSS are stored in browser-local storage. The extension does not require a Fluent Shade account or server. Review the code and permissions before installing; modified versions may behave differently.
 
 ## Known limitations
 
-Website structures differ, so the appearance of some pages may not be perfect. Certain content, including elements inside cross-origin frames or shadow DOM, may not be fully affected by the theme.
+Website structures differ, so styling may not look perfect on every page. Content in cross-origin frames, shadow DOM, and browser-restricted pages may not be fully affected. Website changes can also affect compatibility.
 
-Compatibility can vary depending on the website and its design.
+## Creator's no-monetization position
+
+The creator's intention is for Fluent Shade to remain freely available and not be monetized. The creator does not endorse or encourage selling this project or modified versions, charging for access or premium features, adding advertisements or subscriptions, or soliciting donations as a way to monetize the project.
+
+**Important license clarification:** This statement expresses the creator's wishes; it does not amend or override the GNU GPL-3.0 license. The GPL permits recipients to charge for copies or services when they comply with its terms. The license text governs the legal permissions granted to recipients.
 
 ## Disclaimer
 
-Fluent Shade is provided **"as is," without warranties of any kind**. Use it at your own discretion. Compatibility and appearance are not guaranteed on every website.
+Fluent Shade is provided **"as is," without warranties of any kind**. Use it at your own discretion. Compatibility and appearance are not guaranteed on every website. The author does not promise ongoing maintenance or user support.
+
+Fluent Shade is an independent project and is not affiliated with or endorsed by the original Dark Reader team, Mozilla/Firefox, or Microsoft/Edge. Product names and trademarks belong to their respective owners.
 
 ## License
 
-This project is distributed under the **GNU General Public License v3.0 only (GPL-3.0-only)**. See the [LICENSE](LICENSE) file for the full license text.
-
-Fluent Shade is an independent project and is not affiliated with or endorsed by Mozilla or the original Dark Reader team.
+This project is distributed under the **GNU General Public License v3.0 only (GPL-3.0-only)**, subject to the rights and license terms applicable to included components. See [LICENSE](LICENSE) for the full license text.
 
 ## Credits
 
-Created and maintained by **Brandy**.
-
+Created and credited to **Brandy**.
